@@ -1,0 +1,37 @@
+.navbar-content {
+  height: 7vh;
+}
+.navbar-content .navbar-component {
+  height: 7vh;
+  background-color: #F9F6F1;
+  color: #6B4F3D;
+}
+.navbar-content .navbar-component .MuiBox-root > a {
+  color: #5C7A5C;
+  text-decoration: inherit;
+  padding: 5px;
+}
+.navbar-content .navbar-component .navbar-userInfo {
+  display: flex;
+  gap: 20px;
+}
+.navbar-content .navbar-component .navbar-userInfo a {
+  border-radius: 5px;
+  padding: 0.6em 1.2em;
+  color: #2D2D2D;
+  text-decoration: inherit;
+}
+.navbar-content .navbar-component .navbar-userInfo .navbar-login {
+  color: #F5F5F5;
+  background-color: #6B4F3D;
+}
+.navbar-content .navbar-component .navbar-userInfo .navbar-login:hover {
+  background-color: #5C4232;
+}
+.navbar-content .navbar-component .navbar-userInfo .navbar-register {
+  color: #2D2D2D;
+  border-color: #A78B71;
+}
+.navbar-content .navbar-component .navbar-userInfo .navbar-register:hover {
+  background-color: #D4A55E;
+}

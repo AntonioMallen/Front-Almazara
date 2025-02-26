@@ -1,0 +1,98 @@
+@import "../variables.less";
+
+.login-main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 93vh;
+    background-image: url(../../../assets/login.webp);
+    background-size: cover;
+    background-position: center;
+    color: @text-color-auth;
+
+
+    .login-form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+        width: 320px; // 320 to 420
+        background: transparent;
+        backdrop-filter: blur(15px);
+        border: 2px solid rgba(255,255,255,.2);
+        border-radius: 10px;
+        box-shadow: 5px 5px 20px rgb(39, 39, 39);
+        padding: 30px 40px;
+
+        .login-textFields{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5em;
+
+
+            .login-input{
+                position: relative;
+                width: 100%;
+                gap: 0.5em;
+
+                div{
+                    width: 100%;
+                    margin-bottom: 5px;
+                    label{
+                        color: @text-color-auth;
+                    }
+                    color: @text-color-auth;
+                     ::before {
+                        border-color: @text-color-auth;
+                    }
+                }
+
+                svg{
+                    position: absolute;
+                    top: 23px;
+                    left: 300px;
+                }
+            }
+
+        }
+
+        .forgot-link{
+            display: flex;
+            justify-content: space-between;
+            align-items: center !important;
+            text-align: center;
+            
+            label{
+                span{
+                    color: @text-color-auth;
+                }
+            }
+
+        }
+
+        .register-link{
+            display: flex;
+            justify-content: start;
+        }
+
+        button{
+            border-radius: @button-radius;
+        }
+
+        a {
+            justify-content: left !important;
+            color: @text-color-auth;
+            font-size: 16px;
+            text-decoration: inherit;
+            font-weight: bold;
+            ::hover {
+                color: grey !important;
+            }
+        }
+    }
+
+  
+
+}
