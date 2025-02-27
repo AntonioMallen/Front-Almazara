@@ -1,0 +1,9 @@
+.content-main-container {
+  height: 91vh;
+}
+.content-main-container .cardsContent {
+  background-color: chocolate;
+}
+.content-main-container .cardsContent .cardItem {
+  background-color: green;
+}

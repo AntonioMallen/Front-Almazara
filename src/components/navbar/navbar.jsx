@@ -14,6 +14,7 @@ const nombre = "Almazara"
 
 const pages = [
   {name: 'Prueba', web: '/test'},
+  {name: 'Contenido', web: '/content'},
 ];
 
 
