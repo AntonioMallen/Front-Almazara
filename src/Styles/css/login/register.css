@@ -7,7 +7,7 @@
   background-image: url(../../../assets/login.webp);
   background-size: cover;
   background-position: center;
-  color: #F5F5F5;
+  color: #FFF8F0;
 }
 .register-main-container .register-form {
   display: flex;
@@ -36,13 +36,13 @@
 .register-main-container .register-form .register-textFields .register-input div {
   width: 100%;
   margin-bottom: 5px;
-  color: #F5F5F5;
+  color: #FFF8F0;
 }
 .register-main-container .register-form .register-textFields .register-input div label {
-  color: #F5F5F5;
+  color: #FFF8F0;
 }
 .register-main-container .register-form .register-textFields .register-input div ::before {
-  border-color: #F5F5F5;
+  border-color: #FFF8F0;
 }
 .register-main-container .register-form .register-textFields .register-input svg {
   position: absolute;
@@ -58,7 +58,7 @@
 }
 .register-main-container .register-form a {
   justify-content: left !important;
-  color: #F5F5F5;
+  color: #FFF8F0;
   font-weight: 500;
   font-size: 17px;
   text-decoration: inherit;

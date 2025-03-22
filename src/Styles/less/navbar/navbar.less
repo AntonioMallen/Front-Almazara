@@ -1,18 +1,19 @@
 @import "../variables.less";
 
+@color-text-navbar: #6B4F3D;
 
 .navbar-content{
 
     height: 9vh;
-
     .navbar-component{
+        position: sticky;
 
         height: 9vh;
         background-color: @navbar-background-first;
-            color: #6B4F3D;//@navbar-text-dark;
+            color: @color-text-navbar;
         
         .MuiBox-root > a {
-            color: #5C7A5C;//@navbar-text-dark;
+            color: #5C7A5C;
                 text-decoration: inherit;
                 padding:5px;
         }
@@ -29,20 +30,19 @@
             }
 
             .navbar-login{
-                color: #F5F5F5;//@navbar-text-dark;
+                color: @navbar-text-light;
 
-                background-color: #6B4F3D;
+                background-color: @color-text-navbar;
                 &:hover {
                     background-color:#5C4232;//rgb(18, 77, 136);
                 }
             }
 
             .navbar-register{
-                // background-color: #E4DCD3;//#D4A55E;//@navbar-background;
-                color: #2D2D2D;
+                color: @navbar-text-dark;
                 border-color: #A78B71;
                 &:hover {
-                    background-color:#D4A55E;//#8AA38B;//rgba(226, 226, 226, 0.808);
+                    background-color: @button-hover;//#8AA38B;//rgba(226, 226, 226, 0.808);
                 }
             }
         }

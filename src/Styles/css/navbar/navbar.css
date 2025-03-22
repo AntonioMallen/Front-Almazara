@@ -2,6 +2,7 @@
   height: 9vh;
 }
 .navbar-content .navbar-component {
+  position: sticky;
   height: 9vh;
   background-color: #F9F6F1;
   color: #6B4F3D;
@@ -22,7 +23,7 @@
   text-decoration: inherit;
 }
 .navbar-content .navbar-component .navbar-userInfo .navbar-login {
-  color: #F5F5F5;
+  color: #FFF8F0;
   background-color: #6B4F3D;
 }
 .navbar-content .navbar-component .navbar-userInfo .navbar-login:hover {

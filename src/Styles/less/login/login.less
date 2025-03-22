@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     height: @pages-height;
+    max-height: @pages-height;
     background-image: url(../../../assets/login.webp);
     background-size: cover;
     background-position: center;
@@ -17,12 +18,12 @@
         justify-content: center;
         flex-direction: column;
         gap: 1rem;
-        width: 320px; // 320 to 420
+        width: 320px; 
         background: transparent;
         backdrop-filter: blur(15px);
         border: 2px solid rgba(255,255,255,.2);
         border-radius: 10px;
-        box-shadow: 5px 5px 20px rgb(39, 39, 39);
+        box-shadow: @box-shadow;
         padding: 30px 40px;
 
         .login-textFields{

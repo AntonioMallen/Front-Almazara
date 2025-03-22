@@ -6,7 +6,6 @@ function TestPage() {
 
   return (
     <>
-      <NavBar />
       <CustomTextArea />
     </>
   );

@@ -27,7 +27,6 @@ function Register() {
     
   return (
     <>
-      <Navbar/>
       <div className='register-main-container'>
           <form 
             className='register-form'

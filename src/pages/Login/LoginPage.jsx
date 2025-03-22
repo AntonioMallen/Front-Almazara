@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { TextField, Checkbox, FormControlLabel } from '@mui/material';
 import { FaUser, FaLock } from "react-icons/fa";
-import Navbar from'../../components/navbar/navbar';
 import '../../Styles/css/login/login.min.css';
+import { useAuth } from '../../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+
+
 
 
 function Login() {
-
+  const { login } = useAuth();
+  const navigate = useNavigate();
   const [name, setName] = useState("")
   const [password, setPassword] = useState("")
+  const [rememberMe, setRememberMe] = useState(false)
   const [error, setError] = useState(false)
 
   const handleSubmit = (e) => {
@@ -19,13 +24,48 @@ function Login() {
       return
     }
 
-    setError(false)
+    //var { token, userData } = callLoginAPI()
+
+    var { token, userData } = { token:'no auth', userData: '{"id":"1","name":"'+name+'","role":1,"email":"test@gmail.com"}' }
+
+    if((token !== null && token !== '') && (userData !== null && userData !== ''))
+    {
+      const objetoJS = JSON.parse(userData);
+
+      login(token, objetoJS, rememberMe); // Updating the context
+      navigate('/'); //redirects to main page
+      setError(false)
+    }
+    else{
+      setError(true) // no user in bbdd OR ERROR validate
+
+    }
   }
 
-    
+    const callLoginAPI= () =>{
+
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          user: name,
+          password: password
+        })
+      };
+
+      fetch('/auth/v1/login', requestOptions)
+        .then(response => response.json())
+        .then(data => {
+          var { token, userData } = response.data;
+          // launch okey
+          return { token, userData }
+        })
+        .catch(error => {
+          // Launch error
+        });
+    }
   return (
       <>
-        <Navbar/>
         <div className='login-main-container'>
           <form 
             className='login-form'
@@ -58,7 +98,7 @@ function Login() {
               </div>
             </div>
             <div className='forgot-link'>
-              <FormControlLabel  control={<Checkbox size="small"/>} label="Recuerdame" />
+              <FormControlLabel  control={<Checkbox size="small" onChange={(e)=>setRememberMe(e.target.checked)}/>} label="Recuerdame" />
               <a href='#'>Recuperar contraseña</a>
             </div>
 

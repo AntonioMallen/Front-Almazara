@@ -4,10 +4,11 @@
   flex-direction: column;
   align-items: center;
   height: 91vh;
+  max-height: 91vh;
   background-image: url(../../../assets/login.webp);
   background-size: cover;
   background-position: center;
-  color: #F5F5F5;
+  color: #FFF8F0;
 }
 .login-main-container .login-form {
   display: flex;
@@ -36,13 +37,13 @@
 .login-main-container .login-form .login-textFields .login-input div {
   width: 100%;
   margin-bottom: 5px;
-  color: #F5F5F5;
+  color: #FFF8F0;
 }
 .login-main-container .login-form .login-textFields .login-input div label {
-  color: #F5F5F5;
+  color: #FFF8F0;
 }
 .login-main-container .login-form .login-textFields .login-input div ::before {
-  border-color: #F5F5F5;
+  border-color: #FFF8F0;
 }
 .login-main-container .login-form .login-textFields .login-input svg {
   position: absolute;
@@ -56,7 +57,7 @@
   text-align: center;
 }
 .login-main-container .login-form .forgot-link label span {
-  color: #F5F5F5;
+  color: #FFF8F0;
 }
 .login-main-container .login-form .register-link {
   display: flex;
@@ -67,7 +68,7 @@
 }
 .login-main-container .login-form a {
   justify-content: left !important;
-  color: #F5F5F5;
+  color: #FFF8F0;
   font-size: 16px;
   text-decoration: inherit;
   font-weight: bold;
